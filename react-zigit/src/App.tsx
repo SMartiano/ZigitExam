@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Login from './components/pages/Login/Login';
 import Info from './components/pages/Info/Info';
 
@@ -18,7 +18,6 @@ import { PersonDetails } from './models/PersonDetails';
 
   return (
     <div className="App">
-
       <PersonDetailsContext.Provider value= {{details,setDetails}}>
         <Router>
           <Routes>

@@ -6,6 +6,9 @@ import { PersonDetails } from '../../../models/PersonDetails';
 import { Project } from '../../../models/Project';
 import classes from './Info.module.css';
 import { PersonDetailsContext } from '../../../contexts/ContextPerson';
+import UserInfo from '../../shared/userInfo/UserInfo';
+import { configs } from '../../../constants/configs';
+import TableCard from '../../shared/TableCard/TableCard';
 
 const Info = () => {
     const [token, setToken] = useState<string>();
@@ -20,7 +23,7 @@ const Info = () => {
 
     const getProjects = () => {
         axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
-        axios.get(`https://private-052d6-testapi4528.apiary-mock.com/info`).then(res => {
+        axios.get(`${configs.serverURL}/info`).then(res => {
             setProjects(res.data);
         });
     };
@@ -29,10 +32,8 @@ const Info = () => {
         <div className="app">
             <div>
                 <div className="title">Info</div>
-                {details && <Card>{details.Team}</Card>}
-                {
-                    projects && projects!.map((val: Project) => <div key={val.id}>{val.score}</div>)
-                }
+                { details && <UserInfo personDetails={details} /> }
+                { projects && <TableCard projects={projects} />}
             </div>
         </div>
     )

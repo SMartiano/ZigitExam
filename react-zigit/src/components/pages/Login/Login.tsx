@@ -21,7 +21,7 @@ const Login = () => {
     };
 
     const validateCreds = (): boolean => {
-        const validEmailRegex: RegExp = /^[a-zA-Z0-9.! #$%&'*+/=? ^_`{|}~-]+@[a-zA-Z0-9-]+(?:\. [a-zA-Z0-9-]+)*$/;
+        const validEmailRegex: RegExp = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
         const validPasswordRegex: RegExp = /^(?=.*\d)(?=.*[A-Z])(?!.*[^a-zA-Z0-9])(.{8,})$/;
         
         const email: string = emailRef.current.value;
