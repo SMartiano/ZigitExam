@@ -1,6 +1,6 @@
 export interface PersonDetails {
     name: string;
     Team: string;
-    joinedAt: string;
-    avatar: string;
+    joinedAt: Date;
+    avatar?: string;
 }

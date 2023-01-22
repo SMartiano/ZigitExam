@@ -1,14 +1,12 @@
 import { useContext, useEffect, useState } from 'react';
 import axios from 'axios';
-import { Card } from '@mui/material';
 
-import { PersonDetails } from '../../../models/PersonDetails';
 import { Project } from '../../../models/Project';
-import classes from './Info.module.css';
 import { PersonDetailsContext } from '../../../contexts/ContextPerson';
 import UserInfo from '../../shared/userInfo/UserInfo';
 import { configs } from '../../../constants/configs';
 import TableCard from '../../shared/TableCard/TableCard';
+import classes from './Info.module.css';
 
 const Info = () => {
     const [token, setToken] = useState<string>();
@@ -22,19 +20,16 @@ const Info = () => {
 
 
     const getProjects = () => {
-        axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+        axios.defaults.headers.common['Authorization'] = `Bearer ${localStorage.getItem("token")}`;
         axios.get(`${configs.serverURL}/info`).then(res => {
             setProjects(res.data);
         });
     };
 
     return (
-        <div className="app">
-            <div>
-                <div className="title">Info</div>
-                { details && <UserInfo personDetails={details} /> }
-                { projects && <TableCard projects={projects} />}
-            </div>
+        <div className={classes['info-page']}>
+            {details && <UserInfo personDetails={details} />}
+            {projects && <TableCard projects={projects} />}
         </div>
     )
 }

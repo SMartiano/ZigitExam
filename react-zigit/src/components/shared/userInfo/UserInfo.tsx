@@ -11,10 +11,10 @@ const UserInfo = (props: UserInfoProps): JSX.Element => {
 
     return (
         <Card>
-            <Avatar alt={personDetails.name} src={personDetails.avatar} />
-            <span>{personDetails.name}</span><br/>
-            <span>{personDetails.Team}</span><br/>
-            <span>{personDetails.joinedAt}</span>
+            {personDetails.avatar && <Avatar alt={personDetails.name} src={personDetails.avatar} />}
+            <span>{personDetails.name}</span><br />
+            <span>{personDetails.Team}</span><br />
+            <span>{personDetails.joinedAt.toString()}</span>
         </Card>
     );
 }
