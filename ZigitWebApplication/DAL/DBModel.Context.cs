@@ -28,15 +28,6 @@ namespace DAL
         }
     
     
-        public virtual ObjectResult<sp_GetProjects_Result> sp_GetProjects(string token)
-        {
-            var tokenParameter = token != null ?
-                new ObjectParameter("token", token) :
-                new ObjectParameter("token", typeof(string));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_GetProjects_Result>("sp_GetProjects", tokenParameter);
-        }
-    
         public virtual ObjectResult<sp_Login_Result> sp_Login(string email, string pass)
         {
             var emailParameter = email != null ?
@@ -48,6 +39,15 @@ namespace DAL
                 new ObjectParameter("pass", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_Login_Result>("sp_Login", emailParameter, passParameter);
+        }
+    
+        public virtual ObjectResult<sp_GetProjects_Result> sp_GetProjects(string token)
+        {
+            var tokenParameter = token != null ?
+                new ObjectParameter("token", token) :
+                new ObjectParameter("token", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_GetProjects_Result>("sp_GetProjects", tokenParameter);
         }
     }
 }

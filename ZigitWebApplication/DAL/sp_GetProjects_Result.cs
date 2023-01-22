@@ -13,7 +13,7 @@ namespace DAL
     
     public partial class sp_GetProjects_Result
     {
-        public int ID { get; set; }
+        public string ID { get; set; }
         public Nullable<int> bugsCount { get; set; }
         public Nullable<int> durationInDays { get; set; }
         public Nullable<bool> madeDadeline { get; set; }
