@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZigitWebApplication", "ZigitWebApplication\ZigitWebApplication.csproj", "{1E4887A6-72AE-4B20-9151-F91F270EDA42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{D519EAA3-8701-48C0-9DD0-2DC5D067C338}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1E4887A6-72AE-4B20-9151-F91F270EDA42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E4887A6-72AE-4B20-9151-F91F270EDA42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E4887A6-72AE-4B20-9151-F91F270EDA42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E4887A6-72AE-4B20-9151-F91F270EDA42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D519EAA3-8701-48C0-9DD0-2DC5D067C338}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D519EAA3-8701-48C0-9DD0-2DC5D067C338}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D519EAA3-8701-48C0-9DD0-2DC5D067C338}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D519EAA3-8701-48C0-9DD0-2DC5D067C338}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {21F03328-9BC6-4CC9-858C-6694652C5468}
+	EndGlobalSection
+EndGlobal

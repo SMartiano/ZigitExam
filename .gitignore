@@ -2,4 +2,80 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
+###################
+# compiled source #
+###################
 /ZigitWebApplication/.vs/ZigitWebApplication
+/ZigitWebApplication/*.com
+/ZigitWebApplication/*.class
+/ZigitWebApplication/*.dll
+/ZigitWebApplication/*.exe
+/ZigitWebApplication/*.pdb
+/ZigitWebApplication/*.dll.config
+/ZigitWebApplication/*.cache
+/ZigitWebApplication/*.suo
+# Include dlls if they’re in the NuGet packages directory
+/ZigitWebApplication/!/packages/*/lib/*.dll
+/ZigitWebApplication/!/packages/*/lib/*/*.dll
+# Include dlls if they're in the CommonReferences directory
+/ZigitWebApplication/!*CommonReferences/*.dll
+####################
+# VS Upgrade stuff #
+####################
+/ZigitWebApplication/UpgradeLog.XML
+/ZigitWebApplication/_UpgradeReport_Files/
+###############
+# Directories #
+###############
+/ZigitWebApplication/bin/
+/ZigitWebApplication/obj/
+/ZigitWebApplication/TestResults/
+###################
+# Web publish log #
+###################
+/ZigitWebApplication/*.Publish.xml
+#############
+# Resharper #
+#############
+/ZigitWebApplication/_ReSharper.*
+/ZigitWebApplication/*.ReSharper.*
+############
+# Packages #
+############
+# it’s better to unpack these files and commit the raw source
+# git has its own built in compression methods
+/ZigitWebApplication/*.7z
+/ZigitWebApplication/*.dmg
+/ZigitWebApplication/*.gz
+/ZigitWebApplication/*.iso
+/ZigitWebApplication/*.jar
+/ZigitWebApplication/*.rar
+/ZigitWebApplication/*.tar
+/ZigitWebApplication/*.zip
+######################
+# Logs and databases #
+######################
+/ZigitWebApplication/*.log
+/ZigitWebApplication/*.sqlite
+# OS generated files #
+######################
+/ZigitWebApplication/.DS_Store?
+/ZigitWebApplication/ehthumbs.db
+/ZigitWebApplication/Icon?
+/ZigitWebApplication/Thumbs.db
+/ZigitWebApplication/[Bb]in
+/ZigitWebApplication/[Oo]bj
+/ZigitWebApplication/[Tt]est[Rr]esults
+/ZigitWebApplication/*.suo
+/ZigitWebApplication/*.user
+/ZigitWebApplication/*.[Cc]ache
+/ZigitWebApplication/*[Rr]esharper*
+/ZigitWebApplication/packages
+/ZigitWebApplication/NuGet.exe
+/ZigitWebApplication/_[Ss]cripts
+/ZigitWebApplication/*.exe
+/ZigitWebApplication/*.dll
+/ZigitWebApplication/*.nupkg
+/ZigitWebApplication/*.ncrunchsolution
+/ZigitWebApplication/*.dot[Cc]over
+/.gitignore
