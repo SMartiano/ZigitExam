@@ -93,11 +93,9 @@ const TableCard = (props: TableCardProps): JSX.Element => {
         columns: columns as any,
         data: props.projects
     },
-        useSortBy);
+    useSortBy);
 
     const getCellStyle = (cell) => {
-
-
         let backgroundColor: string = 'white';
         if (cell.column.Header === 'Score') {
             if (cell.value > 90) {
@@ -115,7 +113,6 @@ const TableCard = (props: TableCardProps): JSX.Element => {
             <span>Projects avg: {avg}</span>
             <br />
             <span>Percentage meet deadline: {meetDeadlinePercentage}%</span>
-
 
             <table {...getTableProps()}>
                 <thead>
